@@ -15,6 +15,7 @@ $(".quoteGenButton").on("click", function() {
         console.log(res);
 		quotePic = $("<img>").attr("src", "https://theysaidso.com/quote/image/" + res.contents.quotes[0].id);
         $("#quoteBenderDisplayDiv").append(quotePic);
+        quotePic.addClass("quotePic");
     });
     $.ajax({
         url: "https://newsapi.org/v2/top-headlines?q=" + value + "&apiKey=83aa0452f72948bf8d4ed15cf295b532",
