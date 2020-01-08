@@ -1,14 +1,15 @@
-
+console.log("connected");
 let quotePic;
 let quoteCategory;
 let value;
 
 $(".quoteGenButton").on("click", function() {
+    console.log("clicked")
     clearDiv();
     value = $(this).val();
     console.log(value);
     $.ajax({
-        url: "http://quotes.rest/qod.json?category=" + value,
+        url: "https://quotes.rest/qod.json?category=" + value,
         method: "GET"
     }).then(function(res) {
         console.log(res);
@@ -28,16 +29,11 @@ $(".quoteGenButton").on("click", function() {
             const articleDescription = $("<p>").text(resTwo.articles[i].description).appendTo(articleCard);
             const articleAuthor = $("<p>").text(resTwo.articles[i].author).appendTo(articleCard);
             const articleUrl = $("<a>").text("Link to article").attr("href", resTwo.articles[i].url).appendTo(articleCard);
-            articleCard.addClass("card col-8")
-
-            $("#articleDiv").append(articleCard);
-
-        
-        }
-
-    })
+            articleCard.addClass("card col-8");
+            $("#articles").append(articleCard);
+        };
+    });
 });
-
 function clearDiv(){
 	$("#quoteBenderDisplayDiv").empty();
 };
