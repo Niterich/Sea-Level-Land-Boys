@@ -6,20 +6,29 @@
     <meta charset="UTF-8">
     <meta name="author" content="Author">
     <title>quotebender</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
-<body>
-    <div id="generatorButtonWrapper">
-        <button class="quoteGenButton" id="inspiringQotd" value="inspire">Inspiring Quote</button>
-        <button class="quoteGenButton" id="managementQotd" value="management">Management Quote</button>
-        <button class="quoteGenButton" id="sportsQotd" value="sports">Sports Quote</button>
-        <button class="quoteGenButton" id="lifeQotd" value="life">Life Quote</button>
-        <button class="quoteGenButton" id="funnyQotd" value="funny">Funny Quote</button>
-        <button class="quoteGenButton" id="loveQotd" value="love">Love Quote</button>
-        <button class="quoteGenButton" id="artQotd" value="art">Art Quote</button>
+<body class="body">
+    
+    <div class="container">
+        <div class="jumbotron">
+            <h1>The Sea-Level Land Boys Big Reveal</h1>
+        </div>
+        <div class="row row-cols-4">
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="inspiringQotd" value="inspire">Inspirational</button>
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="managemntQotd" value="management">Management</button>
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="sportsQotd" value="sports">Sports Quote</button>
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="lifeQotd" value="life">Life Qoute</button>
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="loveQotd" value="love">Love Qoute</button>
+            <button type="button" class="btn btn-primary btn-lg quoteGenButton" id="artQotd" value="art">Art Qoute</button>
+        </div>
     </div>
     <div id="quoteBenderDisplayDiv">
+    </div>
+    <div id="articles">
+
     </div>
 
     <!--jQuery-->
