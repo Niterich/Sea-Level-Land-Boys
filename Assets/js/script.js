@@ -2,6 +2,7 @@ console.log("connected");
 let quotePic;
 let quoteCategory;
 let value;
+let emailCounter = 1;
 
 $(".quoteGenButton").on("click", function() {
     console.log("clicked")
@@ -18,7 +19,7 @@ $(".quoteGenButton").on("click", function() {
         quotePic.addClass("quotePic");
     });
     $.ajax({
-        url: "https://newsapi.org/v2/top-headlines?q=" + value + "&apiKey=83aa0452f72948bf8d4ed15cf295b532",
+        url: "https://newsapi.org/v2/everything?q="+ value +"&apiKey=83aa0452f72948bf8d4ed15cf295b532",
         method: "GET"
     }).then(function(resTwo){
         console.log(resTwo);
@@ -29,11 +30,18 @@ $(".quoteGenButton").on("click", function() {
             const articleDescription = $("<p>").text(resTwo.articles[i].description).appendTo(articleCard);
             const articleAuthor = $("<p>").text(resTwo.articles[i].author).appendTo(articleCard);
             const articleUrl = $("<a>").text("Link to article").attr("href", resTwo.articles[i].url).appendTo(articleCard);
-            articleCard.addClass("card col-8");
+            articleCard.addClass("card col-2");
             $("#articles").append(articleCard);
         };
     });
 });
 function clearDiv(){
-	$("#quoteBenderDisplayDiv").empty();
+    $("#quoteBenderDisplayDiv").empty();
+    $("#articles").empty();
 };
+// Script for email list
+$("#emailSubmit").on("click", function(e){
+    e.preventDefault();
+    localStorage.setItem(emailCounter, $("#inputEmail").val());
+    emailCounter++;
+})

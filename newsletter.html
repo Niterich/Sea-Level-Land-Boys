@@ -1,3 +1,8 @@
+<!-- ******************************************
+*  Author : Author   
+*  Created On : Thu Jan 09 2020
+*  File : newsletter.html
+******************************************* -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -5,14 +10,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Author">
-    <title>SLLB | Home</title>
+    <title>SLLB | Newsletter</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 
-<body class="body">
+<body>
     <div class="Navigation">   
-        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Sea-Level Land Boys</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -29,29 +34,21 @@
             </div>
         </nav>
     </div>
-    
     <div class="container">
         <div class="jumbotron">
-            <h1>The Sea-Level Land Boys Big Reveal</h1>
+            <h1>Sign up for our newsletter!</h1>
         </div>
-        <div class="row row-cols-4">
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="inspiringQotd" value="inspire">Inspirational</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="managemntQotd" value="management">Management</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="funnyQotd" value="funny">Funny</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="sportsQotd" value="sports">Sports</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="lifeQotd" value="life">Life</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="loveQotd" value="love">Love</button>
-            <button type="button" class="btn btn-primary btn-xl quoteGenButton m-2" id="artQotd" value="art">Art</button>
-        </div>
-        <div class="row">
-            <div class="offset-3"></div>
-            <div id="quoteBenderDisplayDiv" class="col-6"></div>
-        </div>
-        <div id="articles" class="row">
-    
-        </div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter your email address!</label>
+                <small id="emailHelp" class="form-text text-muted">Get the sauce delivered straight to your inbox.</small>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+                <br>
+                <button id="emailSubmit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
     </div>
-    
+
 
     <!--jQuery-->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
