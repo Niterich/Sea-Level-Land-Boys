@@ -2,6 +2,7 @@ console.log("connected");
 let quotePic;
 let quoteCategory;
 let value;
+let emailCounter = 1;
 
 $(".quoteGenButton").on("click", function() {
     console.log("clicked")
@@ -35,9 +36,12 @@ $(".quoteGenButton").on("click", function() {
     });
 });
 function clearDiv(){
-	$("#quoteBenderDisplayDiv").empty();
+    $("#quoteBenderDisplayDiv").empty();
+    $("#articles").empty();
 };
 // Script for email list
-$("#emailSubmit").on("click", function(){
-    localStorage.setItem("userEmail" ,$(this).prev().val());
+$("#emailSubmit").on("click", function(e){
+    e.preventDefault();
+    localStorage.setItem(emailCounter, $("#inputEmail").val());
+    emailCounter++;
 })

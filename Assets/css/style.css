@@ -10,3 +10,16 @@ img {
     height: 300px;
     text-align: center;
 }
+body {
+    background-image: url("../images/herringbone.png");
+}
+.btn {
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: teal;
+}
+.btn-sharp {
+    border-radius: 0;
+}
