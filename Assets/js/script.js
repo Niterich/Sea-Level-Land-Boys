@@ -23,14 +23,14 @@ $(".quoteGenButton").on("click", function() {
         method: "GET"
     }).then(function(resTwo){
         console.log(resTwo);
-        for (let i = 0; i < resTwo.articles.length; i++) {
+        for (let i = 0; i < 12; i++) {
             const articleCard = $("<div>")
             const articleTitle = $("<h3>").text(resTwo.articles[i].title).appendTo(articleCard);
             const articlePic = $("<img>").attr("src", resTwo.articles[i].urlToImage).appendTo(articleCard);
             const articleDescription = $("<p>").text(resTwo.articles[i].description).appendTo(articleCard);
             const articleAuthor = $("<p>").text(resTwo.articles[i].author).appendTo(articleCard);
             const articleUrl = $("<a>").text("Link to article").attr("href", resTwo.articles[i].url).appendTo(articleCard);
-            articleCard.addClass("card col-2");
+            articleCard.addClass("card col-3");
             $("#articles").append(articleCard);
         };
     });
