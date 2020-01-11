@@ -3,6 +3,8 @@ QuoteSurfer!
 
 Deployed: https://niterich.github.io/Sea-Level-Land-Boys/
 
+Technologies used: Javascript, jQuery, Bootstrap
+
 <strong>How it Works:</strong>
 
 User clicks a category at the top of the page, page is dynamically updated with a quote as well as the top 12 articles relating to that category. There is also a feature for the user to input their email and it will be saved to local storage, creating an email list.
