@@ -1,3 +1,35 @@
 .hide {
     display: none;
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+.quotePic {
+    max-width: 100%;
+    height: 300px;
+}
+body {
+    background-image: url("../images/sea-2755906_1920.jpg");
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.btn {
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: teal;
+}
+.btn-sharp {
+    border-radius: 0;
+}
+.jumbotron {
+    background: rgb(4,10,33);
+background: radial-gradient(circle, rgba(4,10,33,0.9934348739495799) 0%, rgba(9,106,121,1) 50%, rgba(0,54,255,1) 100%);
+color: white;
+}
+@media (min-width: 1200px) {
+    .quotePic {
+      margin-left: 40px;
+    }
+}
